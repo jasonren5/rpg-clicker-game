@@ -14,8 +14,8 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">RPG Clicker Game</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+            <span class="navbar-toggler-icon"></span>
+        </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
                 <a class="nav-item nav-link active" href="#">Placeholder <span class="sr-only">(current)</span></a>
@@ -26,9 +26,35 @@
         </div>
     </nav>
 
+
+    <div class="container-fluid">
+        <div class="row" id="main-row">
+            <div class="col-3" id="status-bar">
+                <p> Level: <span id="playerLevel">0</span> </p>
+                <p> HP: <span id="playerHp">0</span> </p>
+                <p> MP: <span id="playerMp">0</span> </p>
+                <p> Xp: <span id="playerXp">0</span> / <span id="playerMaxXp">0</span> </p>
+                <p> Mun: <span id="playerMun">0</span> </p>
+                <p> Str: <span id="playerStr">0</span> </p>
+                <p> Mun: <span id="playerMun">0</span> </p>
+            </div>
+
+            <div class="col-9" id="col-game">
+                <p>You are fighting an <span id="enemyName">enemyName</span>!</p>
+                <p><span id="enemyHp">1</span>/<span id="enemyMaxHp">1</span></p>
+                <button type="button" id="main-button">Attack!</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="enemy.js"></script>
+    <script src="core.js"></script>
+
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
 </body>
 
 
