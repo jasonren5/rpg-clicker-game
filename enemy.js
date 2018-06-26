@@ -1,6 +1,6 @@
 alert('EnemyScript.js loaded');
 
-var baseMobNames = [
+var forstMobNames = [
     "rat",
     "pidgeon",
     "angry dog",
@@ -10,5 +10,3 @@ var baseMobNames = [
 function generateEnemyName() {
     return baseMobNames[Math.round(Math.random() * (baseMobNames.length - 1))];
 }
-
-alert(generateEnemyName());

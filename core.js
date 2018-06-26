@@ -1,11 +1,11 @@
-var playerHp = 10;
+var playerHp = 30;
 var playerMp = 0;
 var playerMun = 0;
 var playerStrength = 1;
 var playerLevel = 1;
 var playerXp = 0;
 
-var playerMaxXp = playerMaxXp = Math.round(Math.pow(playerLevel, 1.1)) * 10 + 10;;
+var playerMaxXp = playerMaxXp = Math.round(Math.pow(playerLevel, 1.1)) * 10 + 10;
 
 var enemyMaxHp = 10;
 var enemyHp = enemyMaxHp;
@@ -17,10 +17,10 @@ var enemyAtkSpd = 1000;
 var attack = 0;
 var attacking = false;
 
+alert('core.js loaded');
 
-newEnemy();
+//newEnemy();
 refresh();
-//alert('core.js loaded');
 
 document.getElementById('main-button').addEventListener('click', mainButtonClick);
 
@@ -46,7 +46,7 @@ function enemyAttack() {
 }
 
 function newEnemy() { //also called when an enemy is killed
-    enemyName = generateEnemyName();
+    //enemyName = generateEnemyName();
     enemyMaxHp = Math.round(enemyMaxHp * 1.1);
     enemyHp = enemyMaxHp;
     if (attacking == true) {
@@ -70,8 +70,8 @@ function refresh() {
     document.getElementById('playerLevel').innerHTML = Math.round(playerLevel);
     document.getElementById('playerHp').innerHTML = Math.round(playerHp);
     document.getElementById('playerMp').innerHTML = Math.round(playerMp);
-    document.getElementById('playerXp').innerHTML = Math.round(playerXp);
-    document.getElementById('playerMaxXp').innerHTML = Math.round(playerMaxXp);
+    document.getElementById('playerXp').innerHTML = (playerXp * 100 / playerMaxXp).toFixed(2);
+    //document.getElementById('playerMaxXp').innerHTML = Math.round(playerMaxXp);
     document.getElementById('enemyHp').innerHTML = Math.round(enemyHp);
     document.getElementById('enemyMaxHp').innerHTML = Math.round(enemyMaxHp);
     document.getElementById('playerMun').innerHTML = Math.round(playerMun);
@@ -90,4 +90,5 @@ function levelUp() {
     playerLevel++;
     playerXp -= playerMaxXp;
     playerStrength += 1 + Math.round(Math.random() * playerLevel / 10);
+    playerHp += 5;
 }
