@@ -1,6 +1,8 @@
 # rpg-clicker-game
 
-Hi! If you're not me (and this should be a fairly easy question), thanks for stopping by! I hope you're here to check out what I'm doing, and not just steal all of my work; not that there's a whole lot to steal.
+Hi!
+
+If you're not me (and this should be a fairly easy question), thanks for stopping by! I hope you're here to check out what I'm doing, and not just steal all of my work; not that there's a whole lot worth stealing.
 
 My goal is to sharpen my web development skills, while simultaneously working on a personal project. 
 
