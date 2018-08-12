@@ -44,25 +44,47 @@
                 <p>You are fighting <span id="enemyName">error</span>!</p>
                 <p><span id="enemyHp">1</span>/<span id="enemyMaxHp">1</span></p>
                 <button type="button" id="main-button">Attack!</button>
+                <br/>
+                <button type="button" id="dec-diff">-</button>
+                <p id=diff>error</p>
+                <button type="button" id="inc-diff">+</button>
             </div>
         </div>
     </div>
 
-    <ul class="nav nav-tabs" id="myTab" role="tablist">
-        <li class="nav-item">
-            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
-        </li>
-    </ul>
-    <div class="tab-content" id="myTabContent">
-        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">...</div>
-        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
-        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+
+    <nav>
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+            <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Home</a>
+            <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Profile</a>
+            <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</a>
+        </div>
+    </nav>
+
+    <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+            <div class="tab-pane fade show active" id="area-content" role="tabpanel" aria-labelledby="area-tab">
+                <!--
+                <div class="row zone-row" id="plainsZone">
+                    <div class="col-3 zone-name-col">Plains</div>
+                    <div class="col-2 zone-diff-col">1</div>
+                    <div class="col-7 zone-btn-col"><button type="button" class="btn btn-primary" id="area-1"><p>Travel</p></button></div>
+                </div>
+                <div class="row zone-row" id="outskirtsZone">
+                    <div class="col-3 zone-name-col">Outskirts</div>
+                    <div class="col-2 zone-diff-col">2</div>
+                    <div class="col-7 zone-btn-col"><button type="button" class="btn btn-primary" id="area-2"><p>Travel</p></button></div>
+                </div>
+                <div class="row zone-row" id="forestZone">
+                    <div class="col-3 zone-name-col">Forest</div>
+                    <div class="col-2 zone-diff-col">3</div>
+                    <div class="col-7 zone-btn-col"><button type="button" class="btn btn-primary" id="area-3"><p>Travel</p></button></div>
+                </div>
+                -->
+            </div>
+        </div>
+        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">...</div>
+        <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">...</div>
     </div>
 
     <script src="enemy.js"></script>

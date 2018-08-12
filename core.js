@@ -13,12 +13,16 @@ var enemyAtkSpd = 1000;
 var attack = 0;
 var attacking = false;
 
+var zone = 1;
+
 alert('core.js loaded');
 
 newEnemy();
 refresh();
 
 document.getElementById('main-button').addEventListener('click', mainButtonClick);
+document.getElementById('dec-diff').addEventListener('click', decDiff);
+document.getElementById('inc-diff').addEventListener('click', incDiff);
 
 function mainButtonClick() {
     if (attacking == false) {
@@ -42,13 +46,10 @@ function enemyAttack() {
 }
 
 function newEnemy() { //also called when an enemy is killed
-    //enemyName = generateEnemyName();
-    //enemyMaxHp = Math.round(enemyMaxHp * 1.1);
-    //enemy.hp = enemyMaxHp;
     //if (attacking == true) {
     //clearInterval(attack);
     //}
-    enemy = new Enemy(1);
+    enemy = new Enemy(zone);
 }
 
 function rewardPlayer() { //is called when an enemy is killed
@@ -63,7 +64,7 @@ function random(upper, cutoff) {
     return (Math.random() * upper > cutoff);
 }
 
-function refresh() {
+function refresh() { //refreshes numbers. TODO: make this more efficient?
     document.getElementById('playerLevel').innerHTML = Math.round(playerLevel);
     document.getElementById('playerHp').innerHTML = Math.round(playerHp);
     document.getElementById('playerMp').innerHTML = Math.round(playerMp);
@@ -73,6 +74,7 @@ function refresh() {
     document.getElementById('playerMun').innerHTML = Math.round(playerMun);
     document.getElementById('enemyName').innerHTML = enemy.name;
     document.getElementById('playerStr').innerHTML = Math.round(playerStrength);
+    document.getElementById('diff').innerHTML = zone;
 }
 
 function checkLevelUp() {
@@ -87,4 +89,16 @@ function levelUp() {
     playerXp -= playerMaxXp;
     playerStrength += 1 + Math.round(Math.random() * playerLevel / 10);
     playerHp += 5;
+}
+
+function decDiff() {
+    if (zone > 1) {
+        zone--;
+        newEnemy();
+    }
+}
+
+function incDiff() {
+    zone++
+    newEnemy();
 }

@@ -3,3 +3,11 @@
 }
 
 #status-bar span {}
+
+#dec-diff {
+    margin-top: 3em;
+}
+
+#diff {
+    display: inline;
+}
