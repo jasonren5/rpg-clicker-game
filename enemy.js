@@ -9,10 +9,10 @@ var baseMobNames = [
     "feral cat"
 ];
 
-
 function generateEnemyName() {
     return baseMobNames[Math.round(Math.random() * (baseMobNames.length - 1))];
 }
+
 
 class Enemy {
     constructor(difficulty) {
@@ -21,9 +21,4 @@ class Enemy {
         this.str = 1;
         this.name = generateEnemyName();
     }
-
-    //static generateEnemyName() {
-    //
-    //}
-
 }
