@@ -20,7 +20,8 @@ function mainButtonClick() {
 }
 
 function playerAttack() {
-    enemy.hp = enemy.hp - playerStrength;
+    if (keycode)
+        enemy.hp = enemy.hp - playerStrength;
     if (enemy.hp < 1) {
         clearInterval(enemyFight);
         newEnemy();
