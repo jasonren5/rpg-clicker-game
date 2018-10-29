@@ -7,6 +7,6 @@ var baseMobNames = [
     "feral cat"
 ];
 
-function generateEnemyName {
+function generateEnemyName() {
     return Math.round(Math.random() * (baseMobNames.length - 1));
 }
